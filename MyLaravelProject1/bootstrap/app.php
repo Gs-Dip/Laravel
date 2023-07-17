@@ -26,17 +26,17 @@ $app = new Illuminate\Foundation\Application(
 |
 */
 
-$app->singleton(
+$app->singleton(   ///// akhane 3 ta singleton pattarn ar moddhe kernel bebohar kora hoyeche....aita Http ar jonno mane browser a dekhar jonno 
     Illuminate\Contracts\Http\Kernel::class,
     App\Http\Kernel::class
 );
 
-$app->singleton(
+$app->singleton( //// aita output console a dekhar jonno mane terminal a dekhar jonno(tar jonno artisan file ar moddhe giye dd($app) likhte hobe tahole console active hoye jabe)
     Illuminate\Contracts\Console\Kernel::class,
     App\Console\Kernel::class
 );
 
-$app->singleton(
+$app->singleton( //// aita error handel korar jonno 
     Illuminate\Contracts\Debug\ExceptionHandler::class,
     App\Exceptions\Handler::class
 );
