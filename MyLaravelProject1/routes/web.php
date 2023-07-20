@@ -15,11 +15,17 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
+    
     return view('welcome');
 });
 
 Route::get('/test', function () {
     return "i'm test route";
+});
+
+
+Route::get('/test2', function () {
+    app()->make('first_service_provider');
 });
 
 
