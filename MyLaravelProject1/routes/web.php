@@ -3,6 +3,7 @@
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -15,8 +16,13 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
+    // cache()->put("hello","world");
+    // dd(cache()->get("hello"));
+                                        ///////commented codes are un-neassary...i have done it just for practice
+    // Cache::put("hello","world");
+    // dd(cache()->get("hello"));
     
-    return view('welcome');
+     return view('welcome');
 });
 
 Route::get('/test', function () {

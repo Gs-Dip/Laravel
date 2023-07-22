@@ -195,6 +195,8 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
         App\Providers\DipServiceProvider::class,
+        App\Providers\Dip1ServiceProvider::class,
+        App\Providers\JogfolServiceProvider::class,
 
     ],
 
