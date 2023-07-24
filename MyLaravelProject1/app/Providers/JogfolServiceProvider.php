@@ -14,7 +14,7 @@ class JogfolServiceProvider extends ServiceProvider
     public function register()
     {
         app()->bind('jogfol',function(){
-            return new \App\RepositoryDip\dip;
+            return new \App\Repository\jogfol;
         });
     }
 

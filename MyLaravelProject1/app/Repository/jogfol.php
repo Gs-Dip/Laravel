@@ -1,7 +1,7 @@
 <?php
-namespace App\RepositoryDip;
+namespace App\Repository;
 
-class dip{
+class jogfol{
     public function test(){
         $a=10;
         $b=20;
@@ -9,12 +9,15 @@ class dip{
         dd($c);
     }
 
+
     public function test1(){
         $a=20;
         $b=20;
         $c=$a+$b;
         dd($c);
     }
+
+ 
 }
 
 

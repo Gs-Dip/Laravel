@@ -1,11 +1,11 @@
 <?php
-namespace App\RepositoryDip;
+namespace App\Repository;
 use Illuminate\Support\Facades\Facade;
 
-class test extends Facade{
+class Test extends Facade{
     protected static function getFacadeAccessor()   
     {
-        return "jogfol";
+        return 'jogfol';
     }
 }
 

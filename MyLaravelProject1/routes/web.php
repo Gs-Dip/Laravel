@@ -4,6 +4,7 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
 
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -27,6 +28,10 @@ Route::get('/', function () {
 
 Route::get('/test', function () {
     return "i'm test route";
+});
+
+Route::get('/f', function () {
+    Hunter::test();
 });
 
 
