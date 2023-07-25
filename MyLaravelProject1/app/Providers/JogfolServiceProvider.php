@@ -13,8 +13,8 @@ class JogfolServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        app()->bind('jogfol',function(){
-            return new \App\Repository\jogfol;
+        app()->bind('jogfolser',function(){ 
+            return new \App\Repository\jogfol; //////akhane ami app\repository path ar moddhe thaka jogfol class take call korechi
         });
     }
 

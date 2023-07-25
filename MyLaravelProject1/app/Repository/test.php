@@ -5,7 +5,7 @@ use Illuminate\Support\Facades\Facade;
 class Test extends Facade{
     protected static function getFacadeAccessor()   
     {
-        return 'jogfol';
+        return 'jogfolser'; /////akhane amar banano service ar name ta diye diyechi
     }
 }
 

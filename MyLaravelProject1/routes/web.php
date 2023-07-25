@@ -30,7 +30,7 @@ Route::get('/test', function () {
     return "i'm test route";
 });
 
-Route::get('/f', function () {
+Route::get('/facade', function () {
     Hunter::test();
 });
 
@@ -38,6 +38,18 @@ Route::get('/f', function () {
 Route::get('/test2', function () {
     app()->make('first_service_provider');
 });
+
+
+Route::get('/about',function (){
+    return view('about');
+});
+
+
+Route::get('/contruct', function () {
+    return view('contruct');
+});
+
+
 
 
 Route::get('/dashboard', function () {
