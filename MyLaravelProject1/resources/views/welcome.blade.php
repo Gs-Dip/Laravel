@@ -42,6 +42,8 @@
                    <ul class="list">
                     <li class="list-item"> <a href=" {{ url('about') }} ">About</a></li> <!-- akhane url() abong URL::to()  2tar kaj akoii tumi jeita likhte chaw likhte paro url() ar moddhe Route ar name likhte hoy -->
                     <li class="list-item"> <a href="{{ URL::to('contruct') }}">Contuct</a> </li>
+                    <li class="list-item"> <a href="{{ url('service') }}">Service</a> </li>
+                    <li class="list-item"> <a href="{{ route('product.us') }}">Product</a> </li> <!-- name route ar jonno amra aivabe likhbo route ar moddhe name() ar moddhe jei nam ta dibo shei nam ta akhane route ar moddhe bole dite hobe -------->
                    </ul>
 
 
