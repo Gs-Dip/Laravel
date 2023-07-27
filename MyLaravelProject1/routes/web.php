@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
+use Illuminate\Routing\Controllers\Middleware;
 use Illuminate\Support\Facades\Route;
 
 
@@ -23,7 +24,7 @@ Route::get('/', function () {
     // Cache::put("hello","world");
     // dd(cache()->get("hello"));
     
-     return view('welcome');
+    return view('welcome');
 });
 
 Route::get('/test', function () {
@@ -70,6 +71,11 @@ Route::get(md5('/productDlkjauioghioujgoijoij'), function () { ////md5() ar kaj 
 })->name('product.us'); ////ai route tar name ami diyechi product.us ai name ai route take ami sobjaigai bebohar korte pari ...ta chara ami je kono nam dite pari ar moddhe 
 ////////////------------------------------------------------------
 
+
+//////////route for middleware perpase----------------------------
+Route::get('/country',function() {
+    return view('country');
+})->middleware('Dip'); ///////Dip name ami amar banano middleware ta ke app/Http/ kernel.php ar moddhe register kore diyechi tai aikhane oi nam tai diyechi  
 
 
 

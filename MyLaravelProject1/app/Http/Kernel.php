@@ -63,5 +63,6 @@ class Kernel extends HttpKernel
         'signed' => \App\Http\Middleware\ValidateSignature::class,
         'throttle' => \Illuminate\Routing\Middleware\ThrottleRequests::class,
         'verified' => \Illuminate\Auth\Middleware\EnsureEmailIsVerified::class,
+        'Dip' => \App\Http\Middleware\DipMiddleware::class,  ////////akhane ami amar app/Http/Middleware ar moddhe banano middleware take register kore diyechi jate Middleware ta kaj kore
     ];
 }
