@@ -1,8 +1,9 @@
 <?php
-
+use Illuminate\Http\Request;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Routing\Controllers\Middleware;
 use Illuminate\Support\Facades\Route;
+
 
 
 
@@ -74,10 +75,14 @@ Route::get(md5('/productDlkjauioghioujgoijoij'), function () { ////md5() ar kaj 
 
 //////////route for middleware perpase----------------------------
 Route::get('/country',function() {
-    return view('country');
+    return view('country'); /////amar niche dewa middleware ar sorto millei shudhu ai view file ta browser a dekha jabe tar aage na 
 })->middleware('Dip'); ///////Dip name ami amar banano middleware ta ke app/Http/ kernel.php ar moddhe register kore diyechi tai aikhane oi nam tai diyechi  
 
-
+//////////CSRF token (chack route)---------------------------------
+Route::get('/ChackCsrf',function (Request $request){ //// akhane Request ar session theke amar token take nicche......jotobar amra amader server ta php artisan serve diye up korbo toto bar amader CSRF token generate hobe notun kore
+    $token= $request->session()->token();
+    dd($token);
+});
 
 Route::get('/dashboard', function () {
     return view('dashboard');
