@@ -1,4 +1,6 @@
 <?php
+
+use App\Http\Controllers\Delete\DipDelete;
 use Illuminate\Http\Request;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Routing\Controllers\Middleware;
@@ -83,6 +85,16 @@ Route::get('/ChackCsrf',function (Request $request){ //// akhane Request ar sess
     $token= $request->session()->token();
     dd($token);
 });
+
+/////////Use Of (CONTROLLERS)---------------------------------------
+////__laravel 7__////
+//Route::get('/contro', 'Delete/DipDelete@index'); ///////// akhane prothome ami amr route ar nam diye diyechi tar por bole diyechi amar controller ar path jemon Delete folder ar moddhe DipDelete controller ar index method take call korechi
+
+//__laravel 8__//
+Route::get('/controalkjdfiojgoha', [DipDelete::class , 'index'])->name('controller'); /////////akhane prothome ami amr route ar nam diye diyechi tar por bole diyechi amar controller page ar name DipDelete tar por DipDelete page theke index method take call korechi
+
+
+
 
 Route::get('/dashboard', function () {
     return view('dashboard');
