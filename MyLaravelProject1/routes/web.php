@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Delete\DipDelete;
+use App\Http\Controllers\InvokDip;
 use Illuminate\Http\Request;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Routing\Controllers\Middleware;
@@ -93,7 +94,12 @@ Route::get('/ChackCsrf',function (Request $request){ //// akhane Request ar sess
 //__laravel 8__//
 Route::get('/controalkjdfiojgoha', [DipDelete::class , 'index'])->name('controller'); /////////akhane prothome ami amr route ar nam diye diyechi tar por bole diyechi amar controller page ar name DipDelete tar por DipDelete page theke index method take call korechi
 
+/////INVOKEABLE CONTROLLERS------------------------------------------
+Route::get('/invoc', InvokDip::class ); ///// jehetu invokable controller a akta matroi mathod thake tai akhane r bole diye hoy na she amni tei bujhe jai
 
+/////CONTROLLERS Middleware------------------------------------------
+Route::get('/countryChack', [DipDelete::class , 'Country'])->middleware('Dip');
+    
 
 
 Route::get('/dashboard', function () {

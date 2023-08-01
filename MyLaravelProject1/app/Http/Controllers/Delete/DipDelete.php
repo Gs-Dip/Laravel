@@ -11,4 +11,9 @@ class DipDelete extends Controller
     public function index() {
         return view('controller');
     }
+
+    ////__Country mathod__////
+    public function Country() {
+        return view('country');
+    }
 }
