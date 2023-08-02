@@ -87,6 +87,10 @@ Route::get('/ChackCsrf',function (Request $request){ //// akhane Request ar sess
     dd($token);
 });
 
+/////////CSRF TOKEN  ar bebohar-------------------------------------
+Route::get('/form' , [DipDelete::class , 'Form'] );
+Route::post('/formData' , [DipDelete::class ,'Formdata']); 
+
 /////////Use Of (CONTROLLERS)---------------------------------------
 ////__laravel 7__////
 //Route::get('/contro', 'Delete/DipDelete@index'); ///////// akhane prothome ami amr route ar nam diye diyechi tar por bole diyechi amar controller ar path jemon Delete folder ar moddhe DipDelete controller ar index method take call korechi

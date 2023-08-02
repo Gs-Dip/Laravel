@@ -16,4 +16,16 @@ class DipDelete extends Controller
     public function Country() {
         return view('country');
     }
+
+
+    ////__Form mathod__////
+    public function Form() {
+        return view('form');
+    }
+
+
+    ////__Formdata mathod__////
+    public function Formdata(Request $request) { //// akhane Request ar maddhome form theke data dhora hoyeche
+        dd($request->all());
+    }
 }
