@@ -103,6 +103,11 @@ Route::get('/invoc', InvokDip::class ); ///// jehetu invokable controller a akta
 
 /////CONTROLLERS Middleware------------------------------------------
 Route::get('/countryChack', [DipDelete::class , 'Country'])->middleware('Dip');
+
+
+///////Request -------------------------------------------------------
+Route::get('/request', [DipDelete::class, 'Request']);
+Route::post('/postdata' , [DipDelete::class, 'Postdata']);
     
 
 
