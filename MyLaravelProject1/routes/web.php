@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Delete\DipDelete;
+use App\Http\Controllers\Delete\DipDelete2Controller;
 use App\Http\Controllers\InvokDip;
 use Illuminate\Http\Request;
 use App\Http\Controllers\ProfileController;
@@ -108,6 +109,15 @@ Route::get('/countryChack', [DipDelete::class , 'Country'])->middleware('Dip');
 ///////Request -------------------------------------------------------
 Route::get('/request', [DipDelete::class, 'Request']);
 Route::post('/postdata' , [DipDelete::class, 'Postdata']);
+
+
+///////Response--------------------------------------------------------
+Route::get('/response' , [DipDelete::class , 'Response'])->name('respon');
+
+//////Redirect----------------------------------------
+Route::get('/redir',[DipDelete2Controller::class,'test']);
+
+ 
     
 
 

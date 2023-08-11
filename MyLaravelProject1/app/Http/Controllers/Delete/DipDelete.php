@@ -3,6 +3,9 @@
 namespace App\Http\Controllers\Delete;
 
 use App\Http\Controllers\Controller;
+use App\Http\Controllers\Delete\DipDelete2Controller; 
+
+
 use Illuminate\Http\Request;
 
 class DipDelete extends Controller
@@ -49,7 +52,28 @@ class DipDelete extends Controller
         //dd($request->url()); ///request ar url browser a  dekhar jonno 
         //dd($request->ip()); ///request ar ip dekhar jonno
         //dd($request->collect()); ///amader request ar data gulo akta collection aakare dekhar jonno
-        dd($request->all()); 
+        //dd($request->all()); 
+
+
+        /////Redirect concept-------------------------------
+        $data=array();
+        $data['name']=$request->name;
+        $data['email']=$request->email;
+        $data['phone']=$request->phon;
+
+          ///database a save korte hobe akhane tarpor
+
+        //return redirect('/');  /////kono name route redirect korte hole take return redirect()->route('name route ar nam dite hobe akhane')
+        ////or we can redirect to another controller
+        return redirect()->action ( DipDelete2Controller::class , 'test');
+    }
+
+
+
+    public function Response( Request $request){
+        return response('hello world');
+
+        
     }
 
 }
