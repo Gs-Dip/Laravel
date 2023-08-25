@@ -57,19 +57,24 @@ class DipDelete extends Controller
 
         /////Redirect concept-------------------------------
         $data=array();
-        $data['name']=$request->name;
+        $data['name']=$request->name; ////$request->name akhane request theke je nam ta pacchi sheitake $data['name'] ar moddhe rakhchi
         $data['email']=$request->email;
         $data['phone']=$request->phon;
 
           ///database a save korte hobe akhane tarpor
 
         //return redirect('/');  /////kono name route redirect korte hole take return redirect()->route('name route ar nam dite hobe akhane')
+        
         ////or we can redirect to another controller
-        return redirect()->action ( DipDelete2Controller::class , 'test');
+        //return redirect()->action ([DipDelete2Controller::class , 'test']); //// akhane redirect kora hoyeche onno r akta controller DipDelete2Controller ar test method a abong ai controller ar test method ta ke dekhbo tai ai controller ke routes ar moddhe web.php ar moddhe akta get route create korechi jehetu ami aita dekhbo tai get method use korechi route a    
+        
+        //////or we can redirect to another link like (google.com) 
+        return redirect()->away('https://www.google.com'); ////(Redirecting To External Domains)akhane google.com a redirect kore debe
     }
 
 
 
+     ////__Response__////
     public function Response( Request $request){
         return response('hello world');
 
